@@ -1,7 +1,8 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Link, Head } from "@inertiajs/react";
 
-function Navbar() {
+function Navbar({ auth }) {
     return (
         <Popover className="relative bg-white shadow" as="nav">
             <div className="mx-auto max-w-7xl px-6">
@@ -28,28 +29,39 @@ function Navbar() {
                             href="#"
                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                         >
-                            Pricing
+                            Produk
                         </a>
                         <a
                             href="#"
                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                         >
-                            Docs
+                            Tentang Kami
+                        </a>
+                        <a
+                            href="#"
+                            className="text-base font-medium text-gray-500 hover:text-gray-900"
+                        >
+                            Kontak
                         </a>
                     </div>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
-                        <a
-                            href="#"
-                            className="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
-                        >
-                            Sign in
-                        </a>
-                        <a
-                            href="#"
-                            className="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
-                        >
-                            Sign up
-                        </a>
+                        {auth.user ? (
+                            <Link
+                                href={route("dashboard")}
+                                className="hitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                            >
+                                Dashboard
+                            </Link>
+                        ) : (
+                            <>
+                                <Link
+                                    href={route("login")}
+                                    className="hitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900"
+                                >
+                                    Log in
+                                </Link>
+                            </>
+                        )}
                     </div>
                 </div>
             </div>

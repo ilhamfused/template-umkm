@@ -1,4 +1,4 @@
-import { Link, Head } from "@inertiajs/react";
+import { Link, Head, usePage } from "@inertiajs/react";
 import Hero from "./Hero";
 import Product from "./Product";
 import Navbar from "./Navbar";
@@ -7,10 +7,11 @@ import Contacts from "./Contacts";
 import Footer from "./Footer";
 
 function LandingPage() {
+    const { auth } = usePage().props;
     return (
         <>
             <Head title="Template UMKM" />
-            <Navbar />
+            <Navbar auth={auth} />
             <main className="relative overflow-hidden">
                 <Hero />
                 <Product />

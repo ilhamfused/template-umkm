@@ -89,9 +89,9 @@ function Contacts() {
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.6350344606312!2d110.43275441088552!3d-7.052100592920788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708c0396ceec97%3A0x10b388f0c8411e72!2sSemarang%20State%20Polytechnic!5e0!3m2!1sen!2sid!4v1717512045559!5m2!1sen!2sid"
                     width="100%"
                     style={{ border: 0 }}
-                    allowFullcreen=""
+                    allowFullScreen=""
                     loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade"
+                    referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </div>
         </section>

@@ -26,7 +26,10 @@ Route::get('/', function () {
 });
 
 Route::get('/coba', function () {
-    return Inertia::render('LandingPage/LandingPage');
+    return Inertia::render('LandingPage/LandingPage', [
+        'canLogin' => Route::has('login'),
+        'canRegister' => Route::has('register'),
+    ]);
 });
 
 Route::get('/dashboard', function () {
