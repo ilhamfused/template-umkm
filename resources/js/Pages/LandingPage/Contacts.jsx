@@ -9,7 +9,7 @@ function Contacts() {
                 </div>
                 <div className="flex justify-center flex-wrap gap-9 mb-12">
                     <div className="flex-1 flex flex-col items-center justify-center sm:w-[350px] min-w-[300px] w-full rounded-[20px] shadow-3xl px-10 py-10">
-                        <div className="flex justify-center items-center rounded-full ">
+                        <div className="flex justify-center items-center  w-[50px] h-[50px]">
                             <img
                                 src="/src/tokopedia.svg"
                                 alt=""
@@ -34,7 +34,7 @@ function Contacts() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col items-center justify-center sm:w-[350px] min-w-[300px] w-full rounded-[20px] shadow-3xl px-10 py-10">
-                        <div className="flex justify-center items-center rounded-full ">
+                        <div className="flex justify-center items-center w-[50px] h-[50px]">
                             <img
                                 src="/src/shopee.svg"
                                 alt=""
@@ -59,7 +59,7 @@ function Contacts() {
                         </div>
                     </div>
                     <div className="flex-1 flex flex-col items-center justify-center sm:w-[350px] min-w-[300px] w-full rounded-[20px] shadow-3xl px-10 py-10">
-                        <div className="flex justify-center items-center rounded-full ">
+                        <div className="flex justify-center items-center w-[50px] h-[50px]">
                             <img
                                 src="/src/whatsapp.svg"
                                 alt=""

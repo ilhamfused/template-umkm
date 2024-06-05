@@ -1,4 +1,9 @@
-import { Popover, Transition } from "@headlessui/react";
+import {
+    Popover,
+    PopoverButton,
+    PopoverPanel,
+    Transition,
+} from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link, Head } from "@inertiajs/react";
 
@@ -8,21 +13,21 @@ function Navbar({ auth }) {
             <div className="mx-auto max-w-7xl px-6">
                 <div className="flex items-center justify-between py-6 md:justify-start md:space-x-10">
                     <div className="flex justify-start lg:w-0 lg:flex-1">
-                        <a href="#">
+                        <Link href="/">
                             <span className="sr-only">Your Company</span>
                             <img
                                 className="h-8 w-auto sm:h-10"
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                                 alt=""
                             />
-                        </a>
+                        </Link>
                     </div>
                     <div className="-my-2 -mr-2 md:hidden">
-                        <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                        <PopoverButton className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                             <span className="absolute -inset-0.5" />
                             <span className="sr-only">Open menu</span>
                             <Bars3Icon className="h-6 w-6" aria-hidden="true" />
-                        </Popover.Button>
+                        </PopoverButton>
                     </div>
                     <div className="hidden space-x-10 md:flex">
                         <a
@@ -68,13 +73,13 @@ function Navbar({ auth }) {
 
             <Transition
                 enter="duration-200 ease-out"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
+                enterFrom="opacity-0 scale-95"
+                enterTo="opacity-100 scale-100"
                 leave="duration-100 ease-in"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
+                leaveFrom="opacity-100 scale-100"
+                leaveTo="opacity-0 scale-95"
             >
-                <Popover.Panel
+                <PopoverPanel
                     focus
                     className="absolute inset-x-0 top-0 z-10 origin-top-right transform p-2 transition md:hidden"
                 >
@@ -89,7 +94,7 @@ function Navbar({ auth }) {
                                     />
                                 </div>
                                 <div className="-mr-2">
-                                    <Popover.Button className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
+                                    <PopoverButton className="relative inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
                                         <span className="absolute -inset-0.5" />
                                         <span className="sr-only">
                                             Close menu
@@ -98,7 +103,7 @@ function Navbar({ auth }) {
                                             className="h-6 w-6"
                                             aria-hidden="true"
                                         />
-                                    </Popover.Button>
+                                    </PopoverButton>
                                 </div>
                             </div>
                             <div className="mt-6">
@@ -133,7 +138,7 @@ function Navbar({ auth }) {
                             </div>
                         </div>
                     </div>
-                </Popover.Panel>
+                </PopoverPanel>
             </Transition>
         </Popover>
     );

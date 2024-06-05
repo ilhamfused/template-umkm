@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 const products = [
     {
         id: 1,
@@ -79,13 +81,13 @@ export default function Product() {
                 </div>
 
                 <div className="mt-12 text-sm md:text-lg lg:text-xl md:mt-14">
-                    <a
-                        href="#"
+                    <Link
+                        href={route("catalog")}
                         className="font-medium text-indigo-600 hover:text-indigo-500"
                     >
                         Telusuri Katalog Kami
                         <span aria-hidden="true"> &rarr;</span>
-                    </a>
+                    </Link>
                 </div>
             </div>
         </section>

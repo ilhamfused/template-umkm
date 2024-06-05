@@ -1,3 +1,5 @@
+import { Link } from "@inertiajs/react";
+
 export default function Hero() {
     return (
         <section id="hero" className="bg-texture-1">
@@ -19,12 +21,12 @@ export default function Hero() {
                         </p>
                         <div className="mt-10 sm:flex sm:justify-center lg:justify-start">
                             <div className="rounded-md shadow">
-                                <a
-                                    href="#"
+                                <Link
+                                    // href={route("")}
                                     className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 md:px-10 md:py-4 md:text-lg"
                                 >
                                     Get started
-                                </a>
+                                </Link>
                             </div>
                             <div className="mt-3 rounded-md shadow sm:ml-3 sm:mt-0">
                                 <a

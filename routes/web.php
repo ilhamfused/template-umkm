@@ -32,6 +32,10 @@ Route::get('/coba', function () {
     ]);
 });
 
+Route::get('/catalog', function () {
+    return Inertia::render('Catalog/Catalog');
+})->name('catalog');
+
 Route::get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
