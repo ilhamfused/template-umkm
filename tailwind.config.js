@@ -1,6 +1,7 @@
 import defaultTheme from "tailwindcss/defaultTheme";
 import forms from "@tailwindcss/forms";
 import aspectratio from "@tailwindcss/aspect-ratio";
+import aspectratio from "@tailwindcss/typography";
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -17,7 +18,8 @@ export default {
                 sans: ["Figtree", ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                coba: "#30AF5B",
+                "ijo-tokopedia": "#01AA5B",
+                "oren-shopee": "#EE4D2D",
             },
             backgroundImage: {
                 "texture-1": "url('/public/src/pattern-randomized.svg')",

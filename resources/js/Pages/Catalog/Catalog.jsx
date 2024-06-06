@@ -102,7 +102,7 @@ export default function Catalog() {
             <main className="pb-24">
                 <div className="px-4 py-16 text-center sm:px-6 lg:px-8">
                     <h1 className="text-4xl font-bold tracking-tight text-gray-900">
-                        Workspace
+                        Katalog
                     </h1>
                 </div>
 
@@ -130,13 +130,13 @@ export default function Catalog() {
                                 </div>
                                 <div className="pb-4 pt-10 text-center">
                                     <h3 className="text-sm font-medium text-gray-900">
-                                        <a href={product.href}>
+                                        <Link href={route("product")}>
                                             <span
                                                 aria-hidden="true"
                                                 className="absolute inset-0"
                                             />
                                             {product.name}
-                                        </a>
+                                        </Link>
                                     </h3>
                                     <div className="mt-3 flex flex-col items-center">
                                         <p className="sr-only">

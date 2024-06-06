@@ -30,24 +30,30 @@ function Navbar({ auth }) {
                         </PopoverButton>
                     </div>
                     <div className="hidden space-x-10 md:flex">
-                        <a
-                            href="#"
+                        <Link
+                            href="/#product"
                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                         >
                             Produk
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/#about-us"
                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                         >
                             Tentang Kami
-                        </a>
-                        <a
-                            href="#"
+                        </Link>
+                        <Link
+                            href="/#contacts"
                             className="text-base font-medium text-gray-500 hover:text-gray-900"
                         >
                             Kontak
-                        </a>
+                        </Link>
+                        <Link
+                            href={route("catalog")}
+                            className="text-base font-medium text-gray-500 hover:text-gray-900"
+                        >
+                            Katalog
+                        </Link>
                     </div>
                     <div className="hidden items-center justify-end md:flex md:flex-1 lg:w-0">
                         {auth.user ? (

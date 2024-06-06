@@ -17,11 +17,10 @@ use Inertia\Inertia;
 */
 
 Route::get('/', function () {
-    return Inertia::render('Welcome', [
+    return Inertia::render('LandingPage/LandingPage', [
         'canLogin' => Route::has('login'),
-        'canRegister' => Route::has('register'),
-        'laravelVersion' => Application::VERSION,
-        'phpVersion' => PHP_VERSION,
+        // 'canRegister' => Route::has('register'),
+
     ]);
 });
 
@@ -29,16 +28,25 @@ Route::get('/coba', function () {
     return Inertia::render('LandingPage/LandingPage', [
         'canLogin' => Route::has('login'),
         'canRegister' => Route::has('register'),
+        'laravelVersion' => Application::VERSION,
+        'phpVersion' => PHP_VERSION,
     ]);
 });
 
 Route::get('/catalog', function () {
     return Inertia::render('Catalog/Catalog');
 })->name('catalog');
+Route::get('/product', function () {
+    return Inertia::render('Product/ProductPage');
+})->name('product');
 
 Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+    return Inertia::render('Dashboard/Dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::get('/dashboard/catalog', function () {
+    return Inertia::render('Dashboard/CatalogDashboard');
+})->middleware(['auth', 'verified'])->name('catalogDashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
